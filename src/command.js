@@ -15,8 +15,10 @@ export default class ConvertCommonmarkCommand extends Command {
    */
   refresh() {
     const model = this.editor.model;
+    const doc = model.document;
 
     this.value = this._getValueFromEditor();
+    this.isEnabled = this._checkEnabled();
   }
 
   execute() {
@@ -40,5 +42,9 @@ export default class ConvertCommonmarkCommand extends Command {
     const editor = this.editor;
 
     return editor.sourceElement.hasAttribute("data-markdown");
+  }
+
+  _checkEnabled() {
+    return true;
   }
 }

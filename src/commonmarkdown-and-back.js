@@ -19,7 +19,5 @@ export default class CommonmarkdownAndBack extends Plugin {
   /**
    * @inheritDoc
    */
-  init() {
-    console.log("CommonmarkdownAndBack#init");
-  }
+  init() {}
 }

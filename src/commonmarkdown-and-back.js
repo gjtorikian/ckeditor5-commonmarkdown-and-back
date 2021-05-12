@@ -19,5 +19,9 @@ export default class CommonmarkdownAndBack extends Plugin {
   /**
    * @inheritDoc
    */
-  init() {}
+  init() {
+    const editor = this.editor;
+
+    // this.listenTo( editor, 'destroy', () => this._flush(), { priority: 'highest' } );
+  }
 }

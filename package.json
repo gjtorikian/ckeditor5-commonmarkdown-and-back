@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-commonmarkdown-and-back",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Convert back and forth between Commonmark in CKEditor 5.",
   "keywords": [
     "ckeditor",

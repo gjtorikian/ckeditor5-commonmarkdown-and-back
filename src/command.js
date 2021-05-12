@@ -44,7 +44,7 @@ export default class ConvertCommonmarkCommand extends Command {
       let mdData = this._convertIntoBracket(
         this.dataProcessor.toData(markdown)
       );
-      editor.setData(mdData);
+      editor.data.set(mdData, { suppressErrorInCollaboration: true });
 
       if (this.hasAutoformat) {
         editor.plugins._plugins.get("Autoformat").isEnabled = false;
@@ -54,7 +54,7 @@ export default class ConvertCommonmarkCommand extends Command {
 
       let cleanData = data.replace(/\\/g, "");
       let html = stringify(this.dataProcessor.toView(cleanData));
-      editor.setData(html);
+      editor.data.set(html, { suppressErrorInCollaboration: true });
 
       if (this.hasAutoformatEnabled) {
         editor.plugins._plugins.get("Autoformat").isEnabled = true;
